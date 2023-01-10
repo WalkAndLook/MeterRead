@@ -1,0 +1,151 @@
+[2022-12-29 09:24:17,951] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 09:24:18,740] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 09:24:18,776] [INFO] Now run model inference with thresh:0.1, iou_thresh:0.45 [inference.py:45]
+[2022-12-29 09:24:19,406] [INFO] return the inference result in list: label, xmin, ymin, xmax, ymax, conf [inference.py:59]
+[2022-12-29 10:57:33,835] [INFO] this is a fan [logger.py:41]
+[2022-12-29 11:07:50,865] [INFO] this is a fan [logger.py:46]
+[2022-12-29 11:09:11,401] [INFO] this is a fan [logger.py:46]
+[2022-12-29 11:09:38,076] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 11:09:38,904] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 11:09:38,955] [INFO] Now run model inference with thresh:0.1, iou_thresh:0.45 [inference.py:45]
+[2022-12-29 11:09:39,581] [INFO] return the inference result in list: label, xmin, ymin, xmax, ymax, conf [inference.py:59]
+[2022-12-29 11:10:21,428] [INFO] build grpc server,ip:0.0.0.0,port:5000,workers:4 [ioper_server.py:30]
+[2022-12-29 11:10:21,431] [INFO] ================================objection detect server has been started============================ [ioper_server.py:37]
+[2022-12-29 15:16:46,140] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 15:16:46,974] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 15:16:47,008] [INFO] Now run model inference with thresh:0.1, iou_thresh:0.45 [inference.py:45]
+[2022-12-29 15:16:47,642] [INFO] return the inference result in list: label, xmin, ymin, xmax, ymax, conf [inference.py:59]
+[2022-12-29 15:19:07,232] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 15:19:08,029] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 15:19:08,065] [INFO] Now run model inference with thresh:0.1, iou_thresh:0.45 [inference.py:46]
+[2022-12-29 15:19:08,698] [INFO] return the inference result in list: label, xmin, ymin, xmax, ymax, conf [inference.py:60]
+[2022-12-29 15:19:16,603] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 15:19:17,385] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 15:19:17,394] [INFO] build grpc server,ip:0.0.0.0,port:5000,workers:4 [ioper_server.py:32]
+[2022-12-29 15:19:17,405] [INFO] ================================objection detect server has been started============================ [ioper_server.py:39]
+[2022-12-29 16:45:05,477] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 16:45:06,284] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 16:45:06,295] [INFO] build grpc server,ip:0.0.0.0,port:5000,workers:4 [ioper_server.py:32]
+[2022-12-29 16:45:06,297] [INFO] ================================objection detect server has been started============================ [ioper_server.py:39]
+[2022-12-29 16:49:47,412] [ERROR] Exception calling application: Method not implemented! [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\proto\detection_pb2_grpc.py", line 37, in ObjectDetection
+    raise NotImplementedError('Method not implemented!')
+NotImplementedError: Method not implemented!
+[2022-12-29 16:57:21,001] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 16:57:21,811] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 16:57:21,820] [INFO] build grpc server,ip:0.0.0.0,port:5000,workers:4 [ioper_server.py:32]
+[2022-12-29 16:57:21,821] [INFO] ================================objection detect server has been started============================ [ioper_server.py:39]
+[2022-12-29 16:57:33,340] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 16:57:33,340] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 16:57:33,340] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 16:57:33,340] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 16:57:33,340] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 16:59:44,299] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 16:59:44,299] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 16:59:44,299] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 16:59:44,299] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 16:59:44,299] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 17:13:52,204] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 17:13:52,988] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 17:13:52,998] [INFO] build grpc server,ip:0.0.0.0,port:5000,workers:4 [ioper_server.py:32]
+[2022-12-29 17:13:53,004] [INFO] ================================objection detect server has been started============================ [ioper_server.py:39]
+[2022-12-29 17:14:02,086] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:14:02,086] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:14:02,086] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:14:02,086] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:14:02,087] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 17:14:49,118] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:14:49,118] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:14:49,118] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:14:49,118] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:14:49,119] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 17:19:48,489] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:19:48,489] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:19:48,489] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:19:48,489] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:19:48,489] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 17:22:44,056] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:22:44,056] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:22:44,056] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:22:44,057] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:22:44,057] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 17:23:27,591] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:23:27,591] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:23:27,591] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:23:27,591] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:23:27,591] [ERROR] Exception calling application: 'DetectionYolov5' object is not callable [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5(image, thresh, iou_thresh)
+TypeError: 'DetectionYolov5' object is not callable
+[2022-12-29 17:29:40,747] [WARNING] Fusing layers...  [general.py:125]
+[2022-12-29 17:29:41,563] [WARNING] YOLOv5l summary: 267 layers, 46108278 parameters, 0 gradients [general.py:125]
+[2022-12-29 17:29:41,571] [INFO] build grpc server,ip:0.0.0.0,port:5000,workers:4 [ioper_server.py:32]
+[2022-12-29 17:29:41,585] [INFO] ================================objection detect server has been started============================ [ioper_server.py:39]
+[2022-12-29 17:29:48,698] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:29:48,699] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:29:48,699] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:29:48,699] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:29:48,700] [ERROR] Exception calling application: name 'iou_thresh' is not defined [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5.detect(image, thresh, iou_thresh)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\yolov5\inference.py", line 46, in detect
+    logger.info(f'Now run model inference with thresh:{conf_thres}, iou_thresh:{iou_thresh}')
+NameError: name 'iou_thresh' is not defined
+[2022-12-29 17:36:05,619] [INFO] GetObjectDetectionFromImage request ========================================= [object_server_func.py:39]
+[2022-12-29 17:36:05,619] [INFO] input image shape       :(1080, 1920, 3) [object_server_func.py:40]
+[2022-12-29 17:36:05,619] [INFO] yolov5 confidence thresh:0.3 [object_server_func.py:41]
+[2022-12-29 17:36:05,620] [INFO] yolov5 iou_thresh       :0.5 [object_server_func.py:42]
+[2022-12-29 17:36:05,621] [ERROR] Exception calling application: name 'iou_thresh' is not defined [_server.py:453]
+Traceback (most recent call last):
+  File "D:\Miniconda3\lib\site-packages\grpc\_server.py", line 443, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\object_server_func.py", line 54, in ObjectDetection
+    bbox_detection = self.object_detection_yolov5.detect(image, thresh, iou_thresh)
+  File "E:\codeWork\pythonWork\ioper_kc\object_detect\yolov5\inference.py", line 46, in detect
+    logger.info(f'Now run model inference with thresh:{conf_thres}, iou_thresh:{iou_thresh}')
+NameError: name 'iou_thresh' is not defined
