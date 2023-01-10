@@ -23,3 +23,14 @@ The folder is writed for this. By using grpc protocol, we can use the model with
 + first: run the ioper_server.py ,so that the grpc service will be started!!!  And please keep the python file don't stop, keep the service going on until the client will
 not used.
 + second: run the different client.py under test_client folder, input the new parameters, it will return model inference results
+
+# Weight Download
++ yolov5 weights
+  + position: A_ObjectDetect/yolov5/weights and B_ReadMeter/yolov5/weights
+  + url: <https://pan.baidu.com/s/1P8McW3KGL4656p7xCpYe9w?pwd=ho5u>
+  + password: ho5u
++ U2Net weights
+  + position: B_ReadMeter/U2Net/weight
+  + url: <https://pan.baidu.com/s/14K2zscZw6az3KtJu7G6EgQ?pwd=lb7h>
+  + password: lb7h
+
