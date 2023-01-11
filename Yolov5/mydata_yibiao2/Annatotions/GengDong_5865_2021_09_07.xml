@@ -1,0 +1,26 @@
+<annotation>
+	<folder>00150001.10.9</folder>
+	<filename>GengDong_5865_2021_09_07.jpg</filename>
+	<path>E:\biaozhu\00150001.10.9\GengDong_5865_2021_09_07.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>yibiao</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>856</xmin>
+			<ymin>31</ymin>
+			<xmax>976</xmax>
+			<ymax>170</ymax>
+		</bndbox>
+	</object>
+</annotation>
