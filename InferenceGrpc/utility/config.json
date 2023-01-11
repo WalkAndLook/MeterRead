@@ -1,0 +1,32 @@
+{
+  "station_dlstate":{
+    "open": true,
+    "Pipeline": {
+      "isopen": true,
+      "detection": {
+        "note": "使用 yolo5算法检测物体",
+        "gpu": true,
+        "gpu_id": 2,
+        "img_size": 608,
+        "threshold": 0.1,
+        "iou_threshold": 0.45
+      }
+    }
+  },
+  "ReadMeter": {
+    "open": true,
+    "detect_meter": {
+      "note": "使用 yolo5算法检测仪表",
+      "gpu": true,
+      "gpu_id": 2,
+      "img_size": 608,
+      "threshold": 0.1,
+      "iou_threshold": 0.45
+    },
+    "segment_pointer": {
+      "note": "使用yolov5+u2net检测仪表指针",
+      "gpu": true,
+      "gpu_id": 2
+    }
+    }
+}

@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package detect;
+
+service ioper_server{
+  rpc ObjectDetection(ObjectDetectionRequest) returns (ObjectDetectionResponse) {}  // 目标检测
+  rpc ReadMeter(ReadMeterRequest) returns (ReadMeterResponse) {}                    // 仪表读数
+}
+
+//===============目标检测yolov5======================
+message ObjectDetectionRequest {
+  string current_image = 1;           // 图片数据
+  double thresh = 2;                  // 置信度阈值
+  optional double iou_thresh = 3;     // iou阈值
+}
+
+message DetectionBbox {
+  string label = 1;                   // 目标名称
+  double confidence = 2;              // 置信度
+  int32 xmin = 3;                     // 位置xmin
+  int32 ymin = 4;                     // 位置ymin
+  int32 xmax = 5;                     // 位置xmax
+  int32 ymax = 6;                     // 位置ymax
+}
+
+message ObjectDetectionResponse {
+  int32 result = 1;                   // 0--正常，1--失败
+  repeated DetectionBbox object_bbox = 2;  //检测的目标结果
+  optional string result_status = 3;
+}
+
+//===============仪表计算1yolov5+U2net==================
+message ReadMeterRequest{
+  string current_image = 1;           // 图片数据
+  double thresh = 2;                  // 置信度阈值
+  optional double iou_thresh = 3;     // iou阈值
+}
+
+message pointVector{
+  int32 x = 1;                        // 指针向量x坐标
+  int32 y = 2;                        // 指针向量y坐标
+}
+
+message ReadMeterResponse{
+  int32 result = 1;                     // 返回结果0--正常，-1--失败
+  repeated pointVector vector_list = 2; // 返回指针向量
+}
